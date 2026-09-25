@@ -137,7 +137,7 @@ export default function App() {
   // Navigation states
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isAdminOpen, setIsAdminOpen] = useState(
-    window.location.pathname === '/admin' || window.location.hash.includes('admin')
+    (window.location.pathname.includes('admin') || window.location.hash.includes('admin')) || window.location.hash.includes('admin')
   );
 
   // Zoomed Lookbook Item state for click-to-zoom feature
